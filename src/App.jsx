@@ -2,8 +2,12 @@ import { Routes, Route } from 'react-router-dom'
 import ManliestThings from './pages/ManliestThings/ManliestThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import HobbyThings from './pages/HobbyThings/HobbyThings'
 import Landing from './pages/Landing/Landing'
+
 import MusicThings from './pages/MusicThings/MusicThings'
+
+import GuitarThings from './pages/GuitarThings/GuitarThings'
 
 const App = () => {
   const bensThings = [
@@ -63,6 +67,7 @@ const App = () => {
     },
   ]
 
+
   const patrickThings = [
     {
       name: 'FL Studio',
@@ -71,6 +76,30 @@ const App = () => {
       attributes: ['useful', 'innovative', 'easy'],
     },
   ]
+
+
+  const oscarsThings = [
+    {
+      name: "drone",
+      image: "https://m.media-amazon.com/images/I/61pmT7VqRGL.jpg",  
+      attributes: ["flight", "aircraft", "gray", "unmanned"],
+    },
+    {
+      name: "guitar",
+      image: "https://media.guitarcenter.com/is/image/MMGS7/512264000056000-00-1600x1600.jpg",
+      attributes: ["light burst", "mahogany", "godin", "humbucker"]
+    }
+  ]
+
+
+  const ryansThings = [
+    {
+      name: "guitars",
+      image: "https://pbs.twimg.com/media/Fk99bnVaAAEvGom.jpg",  
+      attributes: ["makes noise", "plug or unplugged", "not edible", "wood and steel"],
+    },
+  ]
+
 
   return (
     <Routes>
@@ -88,9 +117,20 @@ const App = () => {
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
       />
+
       <Route 
         path="/the-music-things"
         element={<MusicThings things={patrickThings} />}
+      />
+
+      <Route
+        path="/the-hobby-things"
+        element={<HobbyThings things={oscarsThings} />} 
+      />
+      
+      <Route 
+        path="/the-guitar-things"
+        element={<GuitarThings things={ryansThings} />}
       />
     </Routes>
   )
