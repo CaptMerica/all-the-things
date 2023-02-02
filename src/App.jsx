@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import ManliestThings from './pages/ManliestThings/ManliestThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import HobbyThings from './pages/HobbyThings/HobbyThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -62,6 +63,19 @@ const App = () => {
     },
   ]
 
+  const oscarsThings = [
+    {
+      name: "drone",
+      image: "https://m.media-amazon.com/images/I/61pmT7VqRGL.jpg",  
+      attributes: ["flight", "aircraft", "gray", "unmanned"],
+    },
+    {
+      name: "guitar",
+      image: "https://media.guitarcenter.com/is/image/MMGS7/512264000056000-00-1600x1600.jpg",
+      attributes: ["light burst", "mahogany", "godin", "humbucker"]
+    }
+  ]
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -77,6 +91,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-hobby-things"
+        element={<HobbyThings things={oscarsThings} />}
       />
     </Routes>
   )
