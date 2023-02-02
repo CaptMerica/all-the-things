@@ -4,6 +4,9 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import HobbyThings from './pages/HobbyThings/HobbyThings'
 import Landing from './pages/Landing/Landing'
+
+import MusicThings from './pages/MusicThings/MusicThings'
+
 import GuitarThings from './pages/GuitarThings/GuitarThings'
 
 const App = () => {
@@ -65,6 +68,16 @@ const App = () => {
   ]
 
 
+  const patrickThings = [
+    {
+      name: 'FL Studio',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPzdw4zykS5W1ULQxbIwUbzyZYmVdO6_qt7QtJkgpMrSzhCsA6suFNUPHCq4Q9lY5gyoc&usqp=CAU',
+      attributes: ['useful', 'innovative', 'easy'],
+    },
+  ]
+
+
   const oscarsThings = [
     {
       name: "drone",
@@ -103,6 +116,11 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+
+      <Route 
+        path="/the-music-things"
+        element={<MusicThings things={patrickThings} />}
       />
 
       <Route
