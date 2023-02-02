@@ -4,6 +4,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import HobbyThings from './pages/HobbyThings/HobbyThings'
 import Landing from './pages/Landing/Landing'
+import GuitarThings from './pages/GuitarThings/GuitarThings'
 
 const App = () => {
   const bensThings = [
@@ -63,6 +64,7 @@ const App = () => {
     },
   ]
 
+
   const oscarsThings = [
     {
       name: "drone",
@@ -75,6 +77,16 @@ const App = () => {
       attributes: ["light burst", "mahogany", "godin", "humbucker"]
     }
   ]
+
+
+  const ryansThings = [
+    {
+      name: "guitars",
+      image: "https://pbs.twimg.com/media/Fk99bnVaAAEvGom.jpg",  
+      attributes: ["makes noise", "plug or unplugged", "not edible", "wood and steel"],
+    },
+  ]
+
 
   return (
     <Routes>
@@ -92,9 +104,15 @@ const App = () => {
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
       />
+
       <Route
         path="/the-hobby-things"
-        element={<HobbyThings things={oscarsThings} />}
+        element={<HobbyThings things={oscarsThings} />} 
+      />
+      
+      <Route 
+        path="/the-guitar-things"
+        element={<GuitarThings things={ryansThings} />}
       />
     </Routes>
   )
